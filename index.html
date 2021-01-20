@@ -17,7 +17,7 @@
 <meta property="og:title" content="Parlo.in - Send WhatsApp messages without saving a number to contact" />
 <meta property="og:description" content="Parlo.in - Send WhatsApp messages without saving a number to contact" />
 <meta property="og:image" content="http://www.parlo.in/assets/parlo_logo.png" />
- <script>
+<script>
       // Registering Service worker
       if ("serviceWorker" in navigator) {
          navigator.serviceWorker
@@ -26,7 +26,10 @@
             .catch(err => console.log("service worker not registered", err))
 
       }
-   </script>
+</script>
+<link rel="manifest" href="manifest.json" />
+<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+<meta name="theme-color" content="#db4938" />
 <script>
 
   (adsbygoogle = window.adsbygoogle || []).push({
@@ -36,7 +39,6 @@
     enable_page_level_ads: true
 
   });
-
 </script>
 </head>
 <body>
