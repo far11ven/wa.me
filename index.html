@@ -42,89 +42,92 @@
 </script>
 </head>
 <body>
-
-  <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="bg-indigo-600">
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-gray-50">
   <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between flex-wrap">
       <div class="w-0 flex-1 flex items-center">
-        <span class="flex p-2 rounded-lg bg-indigo-800">
-          <!-- Heroicon name: speakerphone -->
-          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-          </svg>
-        </span>
         <p class="ml-3 font-medium text-white truncate">
-          <span class="md:hidden">
-            We announced a new product!
-          </span>
-          <span class="hidden md:inline">
-            Big news! We're excited to announce our arrival.
-          </span>
+          <div>
+            <a href="/"><img src="/assets/parlo_logo.png" class="h-16 sm:h-18">
+              <p class="block px-1 font-medium text-gray-700">Send WhatsApp messages without saving a number to contact</p>
+          </div>
         </p>
-      </div>
-      <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-        <a href="https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat/?lang=en" class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50">
-          How Parlo works?
-        </a>
       </div>
     </div>
   </div>
 </div>
 
-  <!--main-->
-<div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-    <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-      <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-light-blue-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+<!--main-->
+<div class="min-h-screen bg-gray-100 flex flex-col justify-center">
+    <div class="relative sm:max-w-xl sm:mx-auto">
+      <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-light-blue-300 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
       <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
         <div class="max-w-md mx-auto">
-          <div>
+          <div style="display:none;">
             <a href="/"><img src="/assets/parlo_logo.png" class="h-36 sm:h-40" /> </a>
           </div>
-
           <form id="main-form" onSubmit="return isvalidated(event);">
-            <div class="shadow overflow-hidden sm:rounded-md">
-              <div class="px-4 py-5 bg-white sm:p-6">
                 <div class="grid grid-cols-6 gap-6">
                   <div class="col-span-6 sm:col-span-6 lg:col-span-2">
                     <label for="country_code" class="block text-sm font-medium text-gray-700">Country Code*</label>
-                    <div class="mt-1 flex rounded-md shadow-sm">
-                      <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                    <div class=" flex rounded-md shadow-sm">
+                      <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-300 text-sm">
                         +
                       </span>
-                      <input onkeyup="handleFormInput(this)"  type="text" name="country_code" id="country_code" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="91" required>
+                      <input onkeyup="handleFormInput(this)"  type="text" name="country_code" id="country_code" class=" p-2 focus:ring-gray-300 focus:border-gray-300 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="91" required>
                     </div>
                   </div>
     
                   <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                     <label for="phone_number" class="block text-sm font-medium text-gray-700">Phone No.*</label>
-                    <input onkeyup="handleFormInput(this)" type="text" name="phone_number" id="phone_number" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required>
-                  </div>
-    
-                  <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                    <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                      Go
-                    </button>
+                    <input onkeypress="return isNumber(this)" onkeyup="handleFormInput(this)" type="text" name="phone_number" id="phone_number" class=" p-2 focus:ring-gray-300 focus:border-gray-300 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required>
                   </div>
 
                   <div class="col-span-6 sm:col-span-3 lg:col-span-4">
                     <label for="msg" class="block text-sm font-medium text-gray-700">Message</label>
-                    <textarea onkeyup="handleFormInput(this)" type="text" name="msg" id="msg" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="[Optional]"></textarea>
+                    <textarea onkeypress="return isNumber(this)" onkeyup="handleFormInput(this)" type="text" name="msg" id="msg" class=" p-2 focus:ring-gray-300 focus:border-gray-300 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="[Optional]"></textarea>
+                  </div>
+
+                      
+                  <div class="col-span-6 sm:col-span-3 lg:col-span-4">
+                    <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+                      Go
+                    </button>
                   </div>
 
                 </div>
-              </div>
-            </div>
           </form>  
         </div>
         <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
           <p>We don't store your details, period.</p>
           <p>
-            <a href="/privacy.html" class="text-cyan-600 hover:text-cyan-700"> Read the FAQ &rarr; </a>
+            <a href="/privacy.html" class="font-medium text-indigo-600 hover:text-indigo-300"> Read the FAQ &rarr; </a>
           </p>
         </div>
       </div>
     </div>
+</div>
+<!--Footer-->
+<div class="bg-gray-50">
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+  <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+    <span class="block">Ready to dive in?</span>
+    <span class="block text-indigo-600">Send your first message now.</span>
+  </h2>
+  <div class="mt-8 lex lg:mt-0 lg:flex-shrink-0">
+    <div class="inline-flex rounded-md shadow">
+      <a href="#country_code" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+        Get started
+      </a>
+    </div>
+    <div class="ml-3 inline-flex rounded-md shadow">
+      <a href="https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat/?lang=en" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
+        How Parlo Works?
+      </a>
+    </div>
   </div>
+</div>
+</div>
 </body>
 </html>
