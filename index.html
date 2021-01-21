@@ -42,34 +42,46 @@
 </script>
 </head>
 <body>
-<!-- This example requires Tailwind CSS v2.0+ -->
-<div class="bg-gray-50">
+<!-- Main Banner -->
+<div class="bg-gray-100">
   <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between flex-wrap">
       <div class="w-0 flex-1 flex items-center">
         <p class="ml-3 font-medium text-white truncate">
           <div>
-            <a href="/"><img src="/assets/parlo_logo.png" class="h-16 sm:h-18">
-              <p class="block px-1 font-medium text-gray-700">Send WhatsApp messages without saving a number to contact</p>
+            <a href="/"><img src="/assets/parlo_logo.png" class="h-16 sm:h-18"/>
+            <p class="block px-1 font-medium text-gray-700">Send WhatsApp messages without saving a number to contact</p>
           </div>
         </p>
-      </div>
     </div>
   </div>
 </div>
-
-<!--main-->
-<div class="min-h-screen bg-gray-100 flex flex-col justify-center">
+<!--Mid Banner-->
+<div class="bg-indigo-600">
+  <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between flex-wrap">
+    </div>
+  </div>
+</div>
+</div>
+<!--Main-->
+<div class="mt-8 mb-8 justify-center">
     <div class="relative sm:max-w-xl sm:mx-auto">
       <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-light-blue-300 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-      <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+      <div class="relative px-4 bg-white shadow-lg sm:rounded-3xl sm:p-10">
         <div class="max-w-md mx-auto">
           <div style="display:none;">
-            <a href="/"><img src="/assets/parlo_logo.png" class="h-36 sm:h-40" /> </a>
+            <a href="/"></a>
           </div>
+          <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h3 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <span class="block text-indigo-600">Just enter an active WhatsApp phone number. </span>
+            </h3>
+          </div>
+
           <form id="main-form" onSubmit="return isvalidated(event);">
                 <div class="grid grid-cols-6 gap-6">
-                  <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                  <div class="col-span-6 sm:col-span-3">
                     <label for="country_code" class="block text-sm font-medium text-gray-700">Country Code*</label>
                     <div class=" flex rounded-md shadow-sm">
                       <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-300 text-sm">
@@ -79,12 +91,12 @@
                     </div>
                   </div>
     
-                  <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                  <div class="col-span-6 sm:col-span-3">
                     <label for="phone_number" class="block text-sm font-medium text-gray-700">Phone No.*</label>
-                    <input onkeypress="return isNumber(this)" onkeyup="handleFormInput(this)" type="text" name="phone_number" id="phone_number" class=" p-2 focus:ring-gray-300 focus:border-gray-300 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required>
+                    <input onkeypress="return isNumber(this)" onkeyup="handleFormInput(this)" type="text" name="phone_number" id="phone_number" class=" p-2 focus:ring-gray-300 focus:border-gray-300 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="1234567890" required>
                   </div>
 
-                  <div class="col-span-6 sm:col-span-3 lg:col-span-4">
+                  <div class="col-span-6 sm:col-span-3 lg:col-span-6">
                     <label for="msg" class="block text-sm font-medium text-gray-700">Message</label>
                     <textarea onkeypress="return isNumber(this)" onkeyup="handleFormInput(this)" type="text" name="msg" id="msg" class=" p-2 focus:ring-gray-300 focus:border-gray-300 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="[Optional]"></textarea>
                   </div>
@@ -102,7 +114,7 @@
         <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
           <p>We don't store your details, period.</p>
           <p>
-            <a href="/privacy.html" class="font-medium text-indigo-600 hover:text-indigo-300"> Read the FAQ &rarr; </a>
+            <a href="/privacy.html" class="font-medium text-indigo-600 hover:text-indigo-300"> Read the Privacy Policy &rarr; </a>
           </p>
         </div>
       </div>

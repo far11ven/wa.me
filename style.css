@@ -1,3 +1,4 @@
 input{
-    line-height: 2rem !important;
+    line-height: 1rem !important;
+    border: 0.1rem solid ;
 }
