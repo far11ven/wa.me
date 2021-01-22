@@ -22,11 +22,11 @@ function isvalidated(event) {
   
       isFormValidated = true;
   
-      sendMsg();
+      sendToWhatsapp();
     }
   }
   
-function sendMsg() {
+function sendToWhatsapp() {
     let countryCode = msgDetails.country_code;
     let phoneNumber = msgDetails.phone_number;
     let textMsg = msgDetails.msg;
