@@ -2,3 +2,8 @@ input, textarea{
     line-height: 1rem !important;
     border: 0.1rem solid ;
 }
+
+video {
+    max-width: 60%;
+    height: auto;
+  }
