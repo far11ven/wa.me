@@ -1,3 +1,7 @@
+span#plus_box{
+    color:black;
+}
+    
 input, textarea{
     line-height: 1rem !important;
     border: 0.1rem solid ;
