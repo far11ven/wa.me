@@ -31,5 +31,9 @@ function sendToWhatsapp() {
     let phoneNumber = msgDetails.phone_number;
     let textMsg = msgDetails.msg;
     
-    location = `https://wa.me/${countryCode + phoneNumber}?text=${textMsg}`;
+    if(textMsg === undefined){
+      location = `https://wa.me/${countryCode + phoneNumber}?text=Hello`;
+    } else {
+      location = `https://wa.me/${countryCode + phoneNumber}?text=${textMsg}`;
+    }
   }
