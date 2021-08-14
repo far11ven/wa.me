@@ -2,7 +2,7 @@ let msgData = {};
 
 let isFormValidated = false;
 
-msgData["sender"] = "parlo.in";
+msgData["sender"] = "Parlo.in";
 
 function handleFormInput(e) {
   msgData[e.id] = e.value;
