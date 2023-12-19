@@ -25,7 +25,7 @@ function isvalidated(event) {
 function sendMsg() {
   let requestBody = msgData;
 
-  fetch("https://far11ven-back-end.onrender.com/api/contact", {
+  fetch("https://prod.kushalbhalaik.xyz/api/contact", {
     method: "POST",
 
     body: JSON.stringify(requestBody),
