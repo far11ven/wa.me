@@ -25,7 +25,7 @@ function isvalidated(event) {
 function sendMsg() {
   let requestBody = msgData;
 
-  fetch("https://downgram-back-end.onrender.com/api/contact", {
+  fetch("https://far11ven-back-end.onrender.com/api/contact", {
     method: "POST",
 
     body: JSON.stringify(requestBody),
