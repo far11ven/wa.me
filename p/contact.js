@@ -8,7 +8,7 @@ function handleFormInput(e) {
   msgData[e.id] = e.value;
 }
 
-function isvalidated(event) {
+function isValidated(event) {
   var form = document.getElementById("msg-form");
 
   if (form.checkValidity() === false) {
@@ -50,7 +50,7 @@ function sendMsg() {
 
         newElement.innerHTML = `<p> Thank you! <br> 
             <strong style='color:green'> Your message has been sent. </strong></p><br>
-            <a href="contact-us.html" class="font-medium text-indigo-600 hover:text-indigo-300" target="_self"> forgot something else to say?
+            <a href="/p/contact-us.html" class="font-medium text-indigo-600 hover:text-indigo-300" target="_self"> forgot something else to say?
             </a>
             `;
 

@@ -12,7 +12,7 @@ function handleFormInput(e) {
     msgDetails[e.id] = e.value;
 }
   
-function isvalidated(event) {
+function isValidated(event) {
     var form = document.getElementById("main-form");
   
     if (form.checkValidity() === false) {
